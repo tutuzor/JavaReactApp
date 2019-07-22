@@ -8,13 +8,9 @@ import javax.persistence.Id;
 
 @Data
 @Entity
+@NoArgsConstructor
+@RequiredArgsConstructor
 public class Customer{
     @Id @GeneratedValue private Long id;
-    private String name;
-
-    public Customer(String name){
-        this.name = name;
-    }
-
-    public Customer(){}
+    @NonNull private String name;
 }
