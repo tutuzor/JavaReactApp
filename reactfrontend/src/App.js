@@ -66,7 +66,7 @@ class App extends Component {
                    min="0"
                    onChange={this.changeAmountHandler}></input>
             <br/>
-            <input type="submit"/>
+            <input value="Add Account" type="submit"/>
           </form>
         </div>
       </div>
