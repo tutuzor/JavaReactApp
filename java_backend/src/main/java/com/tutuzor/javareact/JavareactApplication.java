@@ -8,5 +8,4 @@ public class JavareactApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JavareactApplication.class, args);
 	}
-
 }

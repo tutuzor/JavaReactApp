@@ -10,7 +10,7 @@ import javax.persistence.Id;
 @Entity
 @NoArgsConstructor
 @RequiredArgsConstructor
-public class User {
+public class Account {
     @Id @GeneratedValue private Long id;
-    @NonNull private String name;
+    @NonNull private Long custId;
 }
