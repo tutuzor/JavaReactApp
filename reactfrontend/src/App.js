@@ -27,17 +27,17 @@ class App extends Component {
 
   submitHandler = async (event) => {
     event.preventDefault();
-    addAccount({
+    const request = {
       custId: this.state.selectedCustomer.value, 
-      amount: this.state.amount});
+      amount: Number(this.state.amount),
+    }
+    await addAccount(request);
     const bodyAccounts = await getAllAccounts();
     const bodyTransactions = await getAllTransactions();
     this.setState({numberAccounts: bodyAccounts, numberTransactions: bodyTransactions});
   }
-  selectHandler = (event) => {
-    this.setState({selectedCustomer: {value:event.value, label:event.label}});
-  };
-  changeAmountHandler = (event) => this.setState({amount: event.target.value});
+  selectHandler = event => this.setState({selectedCustomer: {value:event.value, label:event.label}});
+  changeAmountHandler = event => this.setState({amount: event.target.value});
 
   render (){
     const {isLoading, customers} = this.state;

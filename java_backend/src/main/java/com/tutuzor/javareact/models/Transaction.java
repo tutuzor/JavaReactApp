@@ -13,5 +13,5 @@ import javax.persistence.Id;
 public class Transaction {
     @Id @GeneratedValue private Long id;
     @NonNull private Long accountId;
-    @NonNull private Double amount;
+    @NonNull private Long amount;
 }

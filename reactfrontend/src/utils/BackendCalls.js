@@ -17,10 +17,8 @@ export const addAccount = async (newAccount) => {
             headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
-            }, body: JSON.stringify({
-            custId: 1,
-            amount: 0,
-            })
+            }, 
+            body: JSON.stringify(newAccount)
         }
     );
 }
